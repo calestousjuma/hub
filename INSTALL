@@ -1,0 +1,107 @@
+* Laravel + Vue + InertiaJS
+
+Follow these steps after cloning the repo to get the app running.
+
+---
+
+* 1. Clone the Repository
+
+#+begin_src sh
+git clone <repo-url>
+cd <repo-name>
+
+or just download y'know?
+#+end_src
+
+---
+
+* 2. Install PHP Dependencies
+
+#+begin_src sh
+composer install* Laravel + Vue + Inertia Setup Guide
+
+Follow these steps after cloning the repo to get the app running.
+
+---
+
+* 1. Clone the Repository
+
+#+begin_src sh
+git clone <repo-url>
+cd <repo-name>
+#+end_src
+
+---
+
+* 2. Install PHP Dependencies
+
+#+begin_src sh
+composer install
+#+end_src
+
+---
+
+* 3. Setup Environment File
+
+#+begin_src sh
+cp .env.example .env
+php artisan key:generate
+#+end_src
+
+Edit `.env` and update:
+
+#+begin_example
+APP_NAME=YourApp
+APP_URL=http://localhost
+
+DB_DATABASE=your_database
+DB_USERNAME=your_user
+DB_PASSWORD=your_password
+#+end_example
+
+---
+
+* 4. Run Migrations and Seeders
+
+#+begin_src sh
+php artisan migrate --seed
+#+end_src
+
+(Skip `--seed` if you don’t need dummy data)
+
+---
+
+* 5. Install Node.js Dependencies
+
+#+begin_src sh
+npm install
+#+end_src
+
+---
+
+* 6. Build Frontend Assets
+
+#+begin_src sh
+npm run dev
+#+end_src
+
+(Use `npm run build` for production)
+
+---
+
+* 7. Serve the Application
+
+#+begin_src sh
+php artisan serve
+#+end_src
+
+App will be available at: http://localhost:8000
+
+---
+
+* Notes
+
+- Frontend: Vue 3 + Inertia.js
+- Backend: Laravel
+- If using Laravel Sail, run: `./vendor/bin/sail up`
+- If using Laravel Valet, run: `valet link && valet open`
